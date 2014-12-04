@@ -10,15 +10,15 @@ class Loading extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'Page loading indicator',
-            'description' => "Adds a 'loading' to the page"
+            'name' => 'cggstudio.loading::lang.plugin.name',
+            'description' => 'cggstudio.loading::lang.plugin.description'
         ];
     }
 
     public function defineProperties()
     {
         return [
-		    'speedCGGStudio' => [
+            'speedCGGStudio' => [
                 'title'                 => 'cggstudio.loading::lang.messages.Speed',
                 'description'           => 'cggstudio.loading::lang.messages.Speed_description',
                 'default'               => 300,
@@ -43,8 +43,8 @@ class Loading extends ComponentBase
     public function onRun()
     {
         $this->Loading = new stdClass();
-        $this->Loading->backgroundColor   = $this->propertyOrParam('backgroundColorCGGStudio');
-		$this->Loading->speed   = $this->propertyOrParam('speedCGGStudio');
+        $this->Loading->backgroundColor = $this->propertyOrParam('backgroundColorCGGStudio');
+        $this->Loading->speed = $this->propertyOrParam('speedCGGStudio');
         $this->page['loading'] = $this->Loading;
 
         // Add css
