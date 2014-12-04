@@ -10,8 +10,8 @@ class Loading extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'Page loading indicator',
-            'description' => "Adds a 'loading' to the page"
+            'name' => 'cggstudio.loading::lang.plugin.name',
+            'description' => 'cggstudio.loading::lang.plugin.description'
         ];
     }
 
