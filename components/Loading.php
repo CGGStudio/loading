@@ -4,9 +4,10 @@ use Lang;
 use Cms\Classes\ComponentBase;
 use \stdClass;
 
-
 class Loading extends ComponentBase
 {
+    private $Loading;
+
     public function componentDetails()
     {
         return [
@@ -43,8 +44,8 @@ class Loading extends ComponentBase
     public function onRun()
     {
         $this->Loading = new stdClass();
-        $this->Loading->backgroundColor = $this->propertyOrParam('backgroundColorCGGStudio');
-        $this->Loading->speed = $this->propertyOrParam('speedCGGStudio');
+        $this->Loading->backgroundColor = $this->property('backgroundColorCGGStudio');
+        $this->Loading->speed = $this->property('speedCGGStudio');
         $this->page['loading'] = $this->Loading;
 
         // Add css
